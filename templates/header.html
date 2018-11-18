@@ -1,0 +1,14 @@
+<div class="row top-menu">
+	<div class="col-md-6">
+		<a href="{{url_for('showCatalogs')}}">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>Show All Catalogs
+		</a>
+	</div>
+	<div class="col-md-6 text-right">
+		{% if 'email' not in session %}
+		<a href="{{url_for('showLogin')}}"><button type="button" class="btn btn-success" style="margin-top:8px; color:black">Login</button></a>
+		{% else %}
+		<a href="{{url_for('gdisconnect')}}"><button type="button" class="btn btn-success" style="margin-top:8px; color:black">Logout</button></a>
+		{% endif %}
+	</div>
+</div>
